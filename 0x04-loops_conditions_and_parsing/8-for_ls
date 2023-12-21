@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+#Only displays the part of the name after the first dash.
+
+list_files=$(ls)
+for i in $list_files;
+do
+  echo "$i" | cut -d '-' -f2
+done
