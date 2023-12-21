@@ -1,0 +1,18 @@
+#!/usr/bin/env bash
+#script that displays Best School 10 times and Hi on the 9th 
+
+idx=1
+
+while [ $idx -le 10 ]
+do
+if [ $idx -eq 4 ]
+then
+echo "bad luck"
+elif [ $idx -eq 8 ]
+then
+echo "good luck"
+else
+echo "Best School"
+fi
+((idx++ ))
+done
