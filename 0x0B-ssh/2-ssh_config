@@ -1,0 +1,10 @@
+#script to configure my server for my own use
+
+Host 52.91.117.205
+    User ubuntu
+    SendEnv LANG LC_*
+    HashKnownHosts yes
+    GSSAPIAuthentication yes
+    GSSAPIDelegateCredentials no
+    IdentityFile ~/.ssh/school
+    PasswordAuthentication no
