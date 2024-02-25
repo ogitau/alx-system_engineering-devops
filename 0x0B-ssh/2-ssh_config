@@ -1,10 +1,5 @@
 #Configure ssh client so that you can log in without password
 
-Host * 
-    User ubuntu
-    SendEnv LANG LC_*
-    HashKnownHosts yes
-    GSSAPIAuthentication yes
-    GSSAPIDelegateCredentials no
-    IdentityFile ~/.ssh/school
-    PasswordAuthentication no
+Host 52.91.117.205
+     IdentityFile ~/.ssh/school
+     PasswordAuthentication no
