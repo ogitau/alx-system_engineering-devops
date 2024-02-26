@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-#Script that configures  Ubuntu machine to Perform  301-redirection
+# Script that configures  Ubuntu machine to Perform  301-redirection
 
 sudo apt-get -y update
 sudo apt-get install -y nginx
@@ -13,7 +13,7 @@ sudo systemctl reload nginx
 if ! grep -q "location /redirect_me {" /etc/nginx/sites-enabled/default; then
     sudo sed -i '/server_name _;/a'\
             'location /redirect_me {\
-                return 301 https://github.com/Kakazablone;\
+                return 301 https://github.com/ogitau;\
             }' /etc/nginx/sites-enabled/default
     # Reload Nginx service
     sudo systemctl reload nginx
