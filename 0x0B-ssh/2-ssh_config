@@ -1,5 +1,5 @@
 #Configure ssh client so that you can log in without password
 
-Host 52.91.117.205
+Host 107.21.58.118
      IdentityFile ~/.ssh/school
      PasswordAuthentication no
