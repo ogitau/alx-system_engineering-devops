@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+# script that runs Nginx as root user Nginx
+sed -i "s/80 default_/8080 default_/" /etc/nginx/sites-enabled/default
+chmod 644 /etc/nginx/nginx.conf
+sudo -u nginx service nginx start
