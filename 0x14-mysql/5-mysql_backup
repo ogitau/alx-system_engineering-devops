@@ -1,0 +1,28 @@
+#!/usr/bin/env bash
+#generates a MySQL dump and creates a compressed archive
+
+if [ $# -ne 1 ]; then
+	echo "Usage: $0 <mysql_password>"
+	exit 1
+fi
+
+MYSQL_DUMP_FILE="backup.sql"
+#Current date with d/m/y format
+CURRENT_DATE=$(date +"%d-%m-%Y")
+
+MYSQL_USER="root"
+MYSQL_PWD="$1"
+mysqldump -u "$MYSQL_USER" -p"$MYSQL_PWD" --all-databases > "MYSQL_DUMP_FILE"
+
+if [ $? -ne 0 ]; then
+	echo "Failed to dump mysql db"
+	exit 1
+fi
+
+ARCHIVE_NAME="$CURRENT_DATE.tar.gz"
+tar -czf "$ARCHIVE_NAME" "$MYSQL_DUMP_FILE"
+
+if [ $? -ne 0 ]; then
+	echo "Failed to compress dump file"
+	exit 1
+fi
