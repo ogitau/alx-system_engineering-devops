@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# script that creats a user and runs whoami command
+
+sudo -u "$1" whoami
