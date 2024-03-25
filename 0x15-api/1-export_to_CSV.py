@@ -21,5 +21,5 @@ if __name__ == '__main__':
         with open('{}.csv'.format(emp_Id), 'w') as file:
             for task in tasks:
                 file.write('"{}","{}","{}","{}"\n'
-                       .format(emp_Id, emp_Name, task.get('completed'),
-                               task.get('title')))
+                           .format(emp_Id, emp_Name, task.get('completed'),
+                                   task.get('title')))
