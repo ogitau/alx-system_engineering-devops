@@ -1,8 +1,8 @@
 #!/usr/bin/python3
 """ Uses a REST API for a todo list of employee"""
 
-from sys import argv
 import requests
+from sys import argv
 
 
 if __name__ == '__main__':
